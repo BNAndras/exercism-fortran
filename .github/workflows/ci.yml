@@ -27,7 +27,7 @@ jobs:
       - name: Install GFortran (macOS)
         if: matrix.os == 'macos'
         run: |
-          brew install gcc@15.1.0
+          brew install gcc@14
           echo "FC=$(brew --prefix gcc)/bin/gfortran" >> $GITHUB_ENV
 
       - name: Verify all exercises
