@@ -66,7 +66,7 @@ program bob_test_main
    call assert_equal("Fine. Be that way!", hey("          "), "prolonged silence")
 
    ! Test 20: alternate silence
-   call assert_equal("Fine. Be that way!", hey( TAB // TAB // & 
+   call assert_equal("Fine. Be that way!", hey(TAB // TAB // & 
                                               & TAB // TAB // &
                                               & TAB // TAB // & 
                                               & TAB // TAB // &
