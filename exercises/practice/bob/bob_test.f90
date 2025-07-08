@@ -66,7 +66,7 @@ program bob_test_main
    call assert_equal("Fine. Be that way!", hey("          "), "prolonged silence")
 
    ! Test 20: alternate silence
-   call assert_equal("Fine. Be that way!", hey(TAB // TAB // & 
+   call assert_equal("Fine. Be that way!", hey( TAB // TAB // & 
                                               & TAB // TAB // &
                                               & TAB // TAB // & 
                                               & TAB // TAB // &
@@ -84,8 +84,7 @@ program bob_test_main
    call assert_equal("Sure.", hey("Okay if like my  spacebar  quite a bit?   "), "ending with whitespace")
 
    ! Test 24: other whitespace
-   call assert_equal("Fine. Be that way!", hey(NEWLINE // &
-    & CARRIAGE_RETURN // " " // TAB), "other whitespace")
+   call assert_equal("Fine. Be that way!", hey(NEWLINE // CARRIAGE_RETURN // " " // TAB), "other whitespace")
 
    ! Test 25: non-question ending with whitespace
    call assert_equal("Whatever.", hey("This is a statement ending with whitespace      "), "non-question ending with whitespace")
