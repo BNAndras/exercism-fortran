@@ -1,9 +1,9 @@
 module bob
   implicit none
 
-  character(len=1), parameter :: CARRIAGE_RETURN = char(13)
-  character(len=1), parameter :: NEWLINE = char(10)
-  character(len=1), parameter :: TAB = char(9)
+  character(len=1), parameter :: CARRIAGE_RETURN_CHAR = char(13)
+  character(len=1), parameter :: NEWLINE_CHAR = char(10)
+  character(len=1), parameter :: TAB_CHAR = char(9)
 
 contains
   function is_uppercase(str)
@@ -30,8 +30,8 @@ contains
     integer :: i
     do i = len(str), 1, -1
       chr = str(i:i)
-      if (chr /= ' ' .and. chr /= TAB .and. &
-          chr /= NEWLINE .and. chr /= CARRIAGE_RETURN) then
+      if (chr /= ' ' .and. chr /= TAB_CHAR .and. &
+          chr /= NEWLINE_CHAR .and. chr /= CARRIAGE_RETURN_CHAR) then
         is_question = (chr .EQ. '?')
         return
       end if
@@ -46,8 +46,8 @@ contains
     integer :: i
     is_blank = .TRUE.
     do i = 1, len(str)
-      chr = str(i:i)
-      if (chr /= ' ' .and. chr /= CARRIAGE_RETURN .and. chr /= NEWLINE .and. chr /= TAB) then
+      if (chr /= ' ' .and. chr /= TAB_CHAR .and. &
+          chr /= NEWLINE_CHAR .and. chr /= CARRIAGE_RETURN_CHAR) then
         is_blank = .FALSE.
         return
       end if
