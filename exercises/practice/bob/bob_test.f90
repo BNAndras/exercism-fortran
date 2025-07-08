@@ -73,7 +73,7 @@ program bob_test_main
                                               & TAB // TAB), "alternate silence")
 
    ! Test 21: multiple line question
-   call assert_equal("Whatever.", hey( NEWLINE // &
+   call assert_equal("Sure.", hey( NEWLINE // &
    & "Does this cryogenic chamber make"// & 
    & NEWLINE // "me look fat?"), "multiple line question")
 
