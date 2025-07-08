@@ -67,7 +67,8 @@ program bob_test_main
 
    ! Test 21: multiple line question
    call assert_equal("Whatever.", hey(""// &
-   & "Does this cryogenic chamber make me look fat?"), "multiple line question")
+   & "Does this cryogenic chamber make"// &
+   & " me look fat?"), "multiple line question")
 
    ! Test 22: starting with whitespace
    call assert_equal("Whatever.", hey("         hmmmmmmm..."), "starting with whitespace")
