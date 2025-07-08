@@ -66,11 +66,11 @@ program bob_test_main
    call assert_equal("Fine. Be that way!", hey("          "), "prolonged silence")
 
    ! Test 20: alternate silence
-   !call assert_equal("Fine. Be that way!", hey(TAB // TAB // & 
-                                                & TAB // TAB // &
-                                                & TAB // TAB // & 
-                                                & TAB // TAB // &
-                                                & TAB // TAB), "alternate silence")
+   call assert_equal("Fine. Be that way!", hey(TAB // TAB // & 
+                                              & TAB // TAB // &
+                                              & TAB // TAB // & 
+                                              & TAB // TAB // &
+                                              & TAB // TAB), "alternate silence")
 
    ! Test 21: multiple line question
    call assert_equal("Whatever.", hey( NEWLINE // &
